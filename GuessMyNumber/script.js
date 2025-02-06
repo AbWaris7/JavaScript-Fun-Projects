@@ -2,7 +2,6 @@
 
 const secretNumber = Math.trunc(Math.random() * 20) + 1;
 let score = 20;
-document.querySelector(".number").textContent = secretNumber;
 
 const clickFunction = function () {
   const guess = document.querySelector(".guess").value;
@@ -17,6 +16,7 @@ const clickFunction = function () {
     document.querySelector(".message").textContent = "Correct Number";
     document.body.style.backgroundColor = "#50b347";
     document.querySelector(".number").style.width = "30rem";
+    document.querySelector(".number").textContent = secretNumber;
 
     // when guess is too high
   } else if (guess > secretNumber) {
@@ -40,4 +40,13 @@ const clickFunction = function () {
     }
   }
 };
+
+const tryAgin = function () {
+  document.querySelector(".number").textContent = "?";
+  document.querySelector(".message").textContent = "Start guessing...";
+  document.querySelector(".score").textContent = "20";
+  document.querySelector(".guess").value = "";
+  document.body.style.backgroundColor = "#222";
+};
 document.querySelector(".check").addEventListener("click", clickFunction);
+document.querySelector(".again").addEventListener("click", tryAgin);
