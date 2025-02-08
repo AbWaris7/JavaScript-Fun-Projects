@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <!-- Add defer here to load JS after HTML -->
+  </head>
+  <body>
+    <div class="container">
+      <div class="calculator">
+        <form>
+          <div class="display">
+            <input type="text" id="display" name="display" disabled />
+          </div>
+          <div>
+            <input type="button" value="AC" onclick="clearDisplay()" />
+            <input type="button" value="DE" onclick="deleteLastCharacter()" />
+            <input type="button" value="." onclick="appendCharacter('.')" />
+            <input type="button" value="/" onclick="appendCharacter('/')" />
+          </div>
+          <div>
+            <input type="button" value="7" onclick="appendCharacter('7')" />
+            <input type="button" value="8" onclick="appendCharacter('8')" />
+            <input type="button" value="9" onclick="appendCharacter('9')" />
+            <input type="button" value="*" onclick="appendCharacter('*')" />
+          </div>
+          <div>
+            <input type="button" value="4" onclick="appendCharacter('4')" />
+            <input type="button" value="5" onclick="appendCharacter('5')" />
+            <input type="button" value="6" onclick="appendCharacter('6')" />
+            <input type="button" value="-" onclick="appendCharacter('-')" />
+          </div>
+          <div>
+            <input type="button" value="1" onclick="appendCharacter('1')" />
+            <input type="button" value="2" onclick="appendCharacter('2')" />
+            <input type="button" value="3" onclick="appendCharacter('3')" />
+            <input type="button" value="+" onclick="appendCharacter('+')" />
+          </div>
+          <div>
+            <input type="button" value="00" onclick="appendCharacter('00')" />
+            <input type="button" value="0" onclick="appendCharacter('0')" />
+            <input
+              type="button"
+              value="="
+              onclick="calculate()"
+              class="equal"
+            />
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
