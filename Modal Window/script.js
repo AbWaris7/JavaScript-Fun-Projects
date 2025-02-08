@@ -18,3 +18,14 @@ for (let x = 0; x < btnsOpenModel.length; x++)
 
 btnCloseModel.addEventListener("click", closeModel);
 overlay.addEventListener("click", closeModel);
+
+// IMPLEMENT KEYBOARD EVENT
+
+document.addEventListener("keydown", function (e) {
+  console.log("a key was pressed");
+  console.log(e.key);
+
+  if (e.key == "Escape") {
+    closeModel();
+  }
+});
